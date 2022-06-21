@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TagController;
 use App\Http\Livewire\Tag;
 use Illuminate\Support\Facades\Route;
 
@@ -14,9 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('tags', [TagController::class, 'index'])->name('index');
 
 Route::group(['middleware' => ['auth', 'verified'], 'prefix' => 'tags'], function(){
     Route::get('/', Tag::class)->name('tags');
