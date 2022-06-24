@@ -1,3 +1,3 @@
-<div>
-    <!-- Life is available only in the present moment. - Thich Nhat Hanh -->
-</div>
+<footer>
+    <h2>Copyright 2022</h2>
+</footer>
