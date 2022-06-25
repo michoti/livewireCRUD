@@ -15,4 +15,12 @@ class Tag extends Model
         'name',
         'slug'
     ];
+
+    public static function search() 
+    {
+        return empty($search)
+        ? static::query()
+        : static::query()->where('id', 'like', '%' . $search . '%')
+                         ->orWhere('name', 'like', '%' . $search . '%');
+    }
 }

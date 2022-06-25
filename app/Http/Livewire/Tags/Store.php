@@ -9,7 +9,6 @@ use Illuminate\Support\Str;
 class Store extends Component
 {
     public $name;
-    public $email;
 
     protected $rules = [
         'name' => ['required', 'unique:tags,name', 'min:3'],
