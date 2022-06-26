@@ -10,14 +10,22 @@ class Store extends Component
 {
     public $name;
 
+    public $openModal = false;
+
     protected $rules = [
-        'name' => ['required', 'unique:tags,name', 'min:3'],
-        'email' => ['required', 'email']
+        'name' => ['required', 'unique:tags,name', 'min:3']
     ];
 
     public function updated($propertyNmae) 
     {
         $this->validateOnly($propertyNmae);
+    }
+
+    public function openModalToCreateTag() 
+    {
+        $this->resetErrorBag();
+        $this->openModal = true;
+
     }
 
     public function store() 
