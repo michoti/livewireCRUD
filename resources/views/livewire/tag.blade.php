@@ -5,4 +5,9 @@
 
     <livewire:tags.store />
     {{-- Success is as dangerous as failure. --}}
+
+
+    {{-- Tags index --}}
+    <livewire:tags.index />
+    
 </div>

@@ -2,7 +2,7 @@
 
 namespace App\Http\Livewire\Tags;
 
-use App\Http\Livewire\Tag;
+use App\Models\Tag;
 use Livewire\Component;
 use Livewire\WithPagination;
 
