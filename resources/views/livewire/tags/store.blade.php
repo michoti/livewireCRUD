@@ -1,7 +1,4 @@
-<div class="p-4">
-    @php
-    $disabled =$errors->any() || empty($this->name) || empty($this->email);
-    @endphp
+<div class="p-4">    
 
     <div class="flex gap">
         <x-jet-button class="bg-green-600 hover:bg-green-500" wire:click='openModalToCreateTag' wire:loading.attr='disabled'>
@@ -36,6 +33,10 @@
             </section>
         </x-slot>
 
+        @php
+          $disabled =$errors->any() || empty($this->name) ? true : false;
+        @endphp
+
         {{-- footer --}}
         <x-slot name='footer'>            
            {{-- cancel button --}}
@@ -43,9 +44,9 @@
                 {{ __('Close window') }}
             </x-jet-button>            
             {{-- create button --}}
-            <x-jet-button wire:target='store' wire:loading.attr='disabled' type="submit" :disabled='$disabled' form="SubmitForm">
+            <x-buttons.secondary wire:target='store' wire:loading.attr='disabled' type="submit" :disabled='$disabled' form="SubmitForm">
                 {{ __('Create') }}
-            </x-jet-button>
+            </x-buttons.secondary>
 
         </x-slot>
 

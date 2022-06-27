@@ -2,8 +2,8 @@
 
 namespace App\Http\Livewire\Tags;
 
+use App\Models\Tag;
 use Livewire\Component;
-use phpDocumentor\Reflection\DocBlock\Tag;
 use Illuminate\Support\Str;
 
 class Store extends Component
