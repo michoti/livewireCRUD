@@ -24,7 +24,7 @@
         <x-slot name='content'>
             <section class="w-full p-4 mx-auto space-y-4 shadow">
         
-                <form wire.submit.prevent='store' class="space-y-4" id="submitForm">
+                <form wire.submit.prevent='store' class="space-y-4" id="SubmitForm">
         
                     {{-- name --}}
                     <div class="space-y-4">
@@ -43,7 +43,7 @@
                 {{ __('Close window') }}
             </x-jet-button>            
             {{-- create button --}}
-            <x-jet-button wire:target='store' wire:loading.attr='disabled' type="submit" :disabled='$disabled' form="submitForm">
+            <x-jet-button wire:target='store' wire:loading.attr='disabled' type="submit" :disabled='$disabled' form="SubmitForm">
                 {{ __('Create') }}
             </x-jet-button>
 

@@ -13,12 +13,12 @@ class Store extends Component
     public $openModal = false;
 
     protected $rules = [
-        'name' => ['required', 'unique:tags,name', 'min:3']
+        'name' => ['required', 'unique:tags,name', 'min:3', 'max:25']
     ];
 
-    public function updated($propertyNmae) 
+    public function updated($propertyName) 
     {
-        $this->validateOnly($propertyNmae);
+        $this->validateOnly($propertyName);
     }
 
     public function openModalToCreateTag() 
